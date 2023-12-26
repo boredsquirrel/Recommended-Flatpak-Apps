@@ -15,7 +15,7 @@ Web Browsers have a security vs. Privacy problem. Chromium is way more secure, w
 Firefox is most likely preinstalled on your System. It is mostly untouched though, and not a privacy browser out of the box.
 It is reasonably secure for most users, and using some tweaks in the graphical settings and the Addons
 [UBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/), as well as more specialized ones like
-[Canvas Fingerprint Defender](https://addons.mozilla.org/en-US/firefox/addon/canvas-fingerprint-defender/), [WebGL Fingerprint Defender](https://addons.mozilla.org/en-US/firefox/addon/webgl-fingerprint-defender/) and [User Agent Switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) in "random" mode can help to mimic Braves random Fingerprinting abilities.
+[Canvas Fingerprint Defender](https://addons.mozilla.org/en-US/firefox/addon/canvas-fingerprint-defender/), [WebGL Fingerprint Defender](https://addons.mozilla.org/en-US/firefox/addon/webgl-fingerprint-defender/) and [User Agent Switcher](https://addons.mozilla.org/en-US/firefox/addon/uaswitcher/) in "random" mode can help to mimic Braves random Fingerprint abilities.
 
 Securitywise, Firefox is okay, probably. With v121 they are Wayland by default, and it can use portals. But regularly you have to trust it a lot, especially as Flatpaks are probably less secure, no matter if their Flatpak is officially supported.
 
@@ -45,6 +45,12 @@ Disabling "private Browsing" can be detected, so do not do it!
 You can install [UBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) on the Browser, as well as [Add Custom Search Engine](https://addons.mozilla.org/en-US/firefox/addon/add-custom-search-engine/) (which is probably okay) and [add a few search engines!](https://github.com/trytomakeyouprivate/Search-Engines/blob/main/Tor-Search-Engines.md)
 
 Be aware that adding region-specific Filterlists may be detectable, and do not install "privacy addons" on the Browser, as its goal is a small and unified fingerprint, not randomization.
+
+You need to verify the download using these commands:
+```
+gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
+gpg --verify /home/user/Programs/Browser/tor-browser-linux-x86_64-x.x.x.tar.xz.asc
+```
 
 ### Chromium
 Chromium may come from your repositories and thus automatically updates (something not existent on Windows!). The updates may not be on time though, and there is no official binary repository.
