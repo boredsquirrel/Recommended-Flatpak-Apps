@@ -9,7 +9,7 @@ The Flatpak Sandbox restricts the Browsers abilities to isolate the processes fr
 
 So, if your Distribution has updated packages, use the repositories version. This does not count for Debian or other "stable" Distros, as these packages are all outdated and not all bugfixes can be backported.
 
-Web Browsers have a security vs. Privacy problem. Chromium is way more secure, while Firefox grants more user Freedom and Privacy (especially in the Manivest v3 Future).
+Web Browsers have a security vs. Privacy problem. Chromium is way more secure, while Firefox grants more user Freedom and Privacy (especially in the Manifest v3 Future).
 
 ### Firefox
 Firefox is most likely preinstalled on your System. It is mostly untouched though, and not a privacy browser out of the box.
