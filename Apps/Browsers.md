@@ -104,6 +104,7 @@ It is often critizised for some "bloat" it brings, like
 - Brave News
 - non-local Translations, still having popups
 - Leo AI integration
+- Dependency on the Chromium Web Store
 
 But similar to Firefox, these Features can be disabled, and you can use policies and config files to preset `brave://flags`. This is not well documented on Linux though, we can hope that this improves.
 
@@ -114,6 +115,7 @@ Its strengths are
 - accountless E2EE (end to end encrypted) synchronisation
 - Randomization of User Identifiers for Anonymity
 - Builtin IPFS, Tor and Bittorrent support
+- continued support for Manifest v2 Addons (allows Addons to download Data, e.g. Adblock/Malware Filterlists)
 
 Brave has [repositories for many Distros](https://brave.com/linux/#release-channel-installation), which is the recommended way of installing.
 
