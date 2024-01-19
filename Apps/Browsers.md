@@ -48,9 +48,9 @@ Be aware that adding region-specific Filterlists may be detectable, and do not i
 
 #### Installation
 
-[First download the Signature, then the Archive from this website.]
+[First download the Signature, then the Archive from this website.](https://www.torproject.org/download/)
 
-![Screenshot of Download Page](...)
+![Screenshot of Download Page](https://raw.githubusercontent.com/trytomakeyouprivate/Recommended-Flatpak-Apps/main/Apps/torbrowser-download.png)
 
 You need to verify the download using these commands:
 ```
