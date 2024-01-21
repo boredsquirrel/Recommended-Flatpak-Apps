@@ -72,46 +72,52 @@ Also: The Fork "Betterbird" is no longer needed for features like the "card view
 Mixin, Session, Telegram & Clients
 
 ## Image Viewers
-GNOME Loupe
-- very secure, sandboxed, written in Rust
-- nearly no Features
-- some lacking View features like "fit image to size"
+### GNOME Loupe
+- very secure, sandboxed SVG display, written in Rust
+- nearly no features
+- unrestricted filesystem access by default, but can use portals
+- no saving needed because it can't do any editing
+- some lacking view features like "fit image to size"
 
-KDE Gwenview
+### KDE Gwenview
 - written in C++, probably less secure
+- unrestricted filesystem access by default, can only open but not save files through the portal
 - small amount of editing features you may want
-- good viewing Settings
+- good viewing settings
 
 ## Video Player
-Celluloid
-- MPV frontent with Wayland Support
+### Celluloid
+- MPV frontent with Wayland support
+- Uses portals for opening files
 - Keyboard shortcuts
 - some theme issues, opinionated GTK Design
 
-VLC
+### VLC
 - not yet official, but very well done
+- doesn't use portals, needs broad filesystem access
 - 4.x is still in Beta, bringing a new Interface (only install way currently is through the Ubuntu PPA, works through Distrobox flawlessly)
-- very complex media suite, not only a Player
-- very customizable, but most Extensions & Themes don't work anymore
+- very complex media suite, not only a player
+- very customizable, but most extensions & themes don't work anymore
 
 ## Music Player
-You may just use your Video Player. Otherwise:
+You may just use your video player. Otherwise:
 
-G4Music
+### G4Music
 - little static permissions
-- can use Portal for default directory
+- can use portal for default directory
 - supports Pipewire and other outputs
-- feature rich, Artist view, albums, no Playlist support
+- feature rich, artist view, albums, no playlist support
 
-Amberol
-- Little static Filesystem Permissions
-- uses Portals to open more Directories or Files
-- No Folders, Playlists, ...
+### Amberol
+- Little static filesystem permissions
+- uses portals to open more directories or files
+- No folders, playlists, ...
 - best in combination with a File Manager
 
-Strawberry
-- old App, static and broad permissions, no Portal usage
+### Strawberry
+- old App, static and broad permissions
 - very feature rich
+- native Wayland support through Qt
 
 ## PDF Programs
 Your Browser can view and even edit PDFs!
