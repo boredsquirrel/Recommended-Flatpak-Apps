@@ -62,11 +62,13 @@ Most popular messengers are way more secure than Mail, phone calls or SMS.
 ### Matrix
 Element, Syphon, Fluffychat
 
+Fractal is a GTK client written in Rust, adaptive UI and working great, not all features supported though
+
 ### XPP
 Dino, Gajim
 
 ### Signal, Threema
-Signal, Flare, Threema
+official clients
 
 ### Warnings
 Mixin, Session, Telegram & Clients
