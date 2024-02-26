@@ -87,14 +87,7 @@ There are some ways to download the latest binaries
 - [Download and run Script](https://github.com/scheib/chromium-latest-linux)
 - [Woolyss' Website, seems to be ungoogled Chromium](https://chromium.woolyss.com/#linux)
 
-To run certain packages of Chromium through Wayland you may need to add `--ozone-platform=wayland` at the end of its `Exec=` line like this:
-
-```
-cp /usr/share/applications/chromium.desktop ~/.local/share/applications/chromium.desktop
-$EDITOR ~/.local/share/applications/chromium.desktop
-```
-
-The local Desktop Entry will display instead of the system one. This should not be necessary anymore though, as Wayland is now officially supported.
+[Secureblue includes configurations for hardening Chromium, here is a list comparing it with Vanadium on GrapheneOS](https://github.com/secureblue/secureblue/blob/live/config/files/usr/etc/chromium/vanadium_comparison.readme.md)
 
 ### Brave
 Brave is a fork of Chromium, that adds many privacy optimizations.
