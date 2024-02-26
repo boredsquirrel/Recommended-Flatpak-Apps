@@ -213,7 +213,7 @@ fwupdmgr upgrade
 
 ### Libreoffice
 is the only complete Office Suite for easily editing WYSIWYG (what you see is what you get) Documents.
-- huge and old codebase
+- huge and old codebase, Flatpak can only be installed as a bundle of all
 - incompatible with portals currently ([Issue](https://bugs.documentfoundation.org/show_bug.cgi?id=159311)
 
 ### Alternative Solutions
@@ -243,7 +243,10 @@ Creating those can be done using Markdown, LaTeX and more. You may want to use [
 Otherwise, Libreoffice Impress is the best tool.
 
 #### Calculations
-No tool is as complete and easy to use as Libreoffice Calc
+[Gnumeric](https://flathub.org/apps/org.gnumeric.Gnumeric)
+- Very similar to Libreoffice Calc, support for the same filetypes
+- restricted filesystem permission but [no portal support](https://gitlab.gnome.org/GNOME/gnumeric/-/issues/760) (so you need to extend it)
+- GTK, Wayland support
 
 ## Image Editing
 
