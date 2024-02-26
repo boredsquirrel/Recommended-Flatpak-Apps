@@ -14,10 +14,10 @@ If a piece Software is actually secure has to be decided per-app though, as it i
 - [Office](#office)
 - [Image Editing](#image-editing)
 - [File Encryption](#file-encryption)
-- [Password Management](#passwords)
-- [Synchronisation & Backups](#sync)
+- [Password Management](#password-management)
+- [Synchronisation & Backups](#synchronisation--backups)
 - [File sharing](#file-sharing)
-- [Screen recording / Streaming](#record-stream)
+- [Screen recording / Streaming](#screen-recording--streaming)
 - [Tools](#tools)
 
 ### Why this is needed
