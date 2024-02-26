@@ -86,14 +86,14 @@ Telegram:
 - Telegram doesn't support E2EE group chats at all
 
 ## Image Viewer
-### [GNOME Loupe](https://flathub.org/apps/org.gnome.Loupe)
+### [Loupe](https://flathub.org/apps/org.gnome.Loupe)
 - very secure, sandboxed SVG display, written in Rust
 - nearly no features
 - unrestricted filesystem access by default, but can use portals
 - no saving needed because it can't do any editing
 - some lacking view features like "fit image to size"
 
-### [KDE Gwenview](https://flathub.org/apps/org.kde.gwenview)
+### [Gwenview](https://flathub.org/apps/org.kde.gwenview)
 - written in C++, probably less secure
 - unrestricted filesystem access by default, can only open but not save files through the portal
 - small amount of editing features you may want
@@ -162,17 +162,17 @@ In Firefox when not using Arkenfox / Librewolf make sure
 
 `pdfjs.enableScripting = false` in `about:config`
 
-### KDE Okular
-- feature rich PDF viewer
+### Okular
 - some editing capabilities
-- completely unrestricted filesystem permissions
+- completely unrestricted filesystem permissions, works perfectly without, using portal
 - Internet Permission
-- can use the Portal for opening and saving files without any problems
+- Qt, Wayland support
 
-### GNOMEs Evince
-- has filesystem Access by default
-- can use the Portal for opening
-- also for saving PDFs, but you always need to specify the location.
+### Evince
+- has filesystem Access by default, works without, using portals
+  - for opening PDFs
+  - also for saving PDFs, but you always need to specify the location.
+- GTK, Wayland support
 
 ## System
 
