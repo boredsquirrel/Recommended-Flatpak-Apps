@@ -78,7 +78,7 @@ official clients use Electron, Flare for Signal is not yet complete.
 ### Warnings
 Mixin: outdated runtime, not well maintained
 
-Teams, Skype, Discord, ...: all not E2EE so your messages will be read, scanned, etc.
+Teams, Skype, Discord,... : all not E2EE so your messages will be read, scanned, etc.
 
 Telegram:
 - not using Electron, well packaged
@@ -121,6 +121,8 @@ MOUSE_BTN0 cycle pause
 CTRL+UP add speed +0.1
 CTRL+DOWN add speed -0.1
 ```
+
+Place this file in `~/.var/app/io.github.celluloid_player.Celluloid/config/celluloid/` to allow automatic loading etc.
 
 ### [Glide](https://flathub.org/apps/net.baseart.Glide)
 - minimalist filesystem permission, no portal support (opening videos through filemanager works)
