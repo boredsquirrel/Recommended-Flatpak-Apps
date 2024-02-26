@@ -75,7 +75,7 @@ Theoretically you can install most Firefox addon files manually. ("Dark Backgrou
 Also: The Fork "Betterbird" is no longer needed for features like the "card view" that got integrated into Thunderbird. It also may be behind on updates.
 
 ## Messenger
-Most popular messengers are way more secure than Mail, phone calls or SMS. Many clients are using Electron which is a security issue, you may want to use them in a browser or with an alternative app.
+Most popular messengers are way more secure than Mail, phone calls or SMS. Many clients are using Electron which is a security issue, because it bundles a less secure Chromium, is overcomplex and doesnt respect system configs.
 
 ### Matrix
 Fractal
@@ -87,11 +87,13 @@ Fractal
 
 Element, Syphon, Fluffychat: all Electron apps, Element may be preferred. Use Element Web if you want to avoid using Electron apps.
 
-### XPP
+### XMPP
 Dino, Gajim
+- GTK, Wayland support
+- file portal support
 
 ### Signal, Threema
-official clients use Electron, Flare for Signal is not yet complete.
+Official clients use Electron, Flare for Signal is not yet complete.
 
 ### Warnings
 Mixin: outdated runtime, not well maintained
