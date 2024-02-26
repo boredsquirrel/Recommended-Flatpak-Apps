@@ -89,6 +89,8 @@ There are some ways to download the latest binaries
 
 [Secureblue includes configurations for hardening Chromium, here is a list comparing it with Vanadium on GrapheneOS](https://github.com/secureblue/secureblue/blob/live/config/files/usr/etc/chromium/vanadium_comparison.readme.md)
 
+[Chromium now supports per-website opt-in](https://github.com/secureblue/secureblue/blob/live/FAQ.md#i-need-javascript-jit-for-a-specific-site-how-do-i-enable-it) to use Javascript JIT in a policy file, so videocalls, some encryption websites etc. work, while you are safe from unknown exploits of this exception.
+
 ### Brave
 Brave is a fork of Chromium, that adds many privacy optimizations.
 It is often critizised for some "bloat" it brings, like
