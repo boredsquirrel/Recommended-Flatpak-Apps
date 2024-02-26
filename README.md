@@ -22,7 +22,7 @@ So this list is a collection of Apps where maybe there is no alternative yet, an
 
 ---
 
-## [Web Browsers](https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
+## [Web Browser](https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
 These are not yet recommended as Flatpaks and in general the most complex topic.
 
 So they get an extra page.
@@ -57,23 +57,35 @@ Theoretically you can install most Firefox addon files manually. ("Dark Backgrou
 Also: The Fork "Betterbird" is no longer needed for features like the "card view" that got integrated into Thunderbird. It also may be behind on updates.
 
 ## Messenger
-Most popular messengers are way more secure than Mail, phone calls or SMS. 
+Most popular messengers are way more secure than Mail, phone calls or SMS. Many clients are using Electron which is a security issue, you may want to use them in a browser or with an alternative app.
 
 ### Matrix
-Element, Syphon, Fluffychat
+Fractal
+- GTK client, native Wayland support
+- no filesystem access, uses portals
+- written in Rust
+- adaptive UI
+- not all features supported, sometimes opinionated design
 
-Fractal is a GTK client written in Rust, adaptive UI and working great, not all features supported though
+Element, Syphon, Fluffychat: all Electron apps, Element may be preferred. Use Element Web if you want to avoid using Electron apps.
 
 ### XPP
 Dino, Gajim
 
 ### Signal, Threema
-official clients
+official clients use Electron, Flare for Signal is not yet complete.
 
 ### Warnings
-Mixin, Session, Telegram & Clients
+Mixin: outdated runtime, not well maintained
 
-## Image Viewers
+Teams, Skype, Discord, ...: all not E2EE so your messages will be read, scanned, etc.
+
+Telegram:
+- not using Electron, well packaged
+- Desktop does not support end-to-end encryption
+- Telegram doesn't support E2EE group chats at all
+
+## Image Viewer
 ### [GNOME Loupe](https://flathub.org/apps/org.gnome.Loupe)
 - very secure, sandboxed SVG display, written in Rust
 - nearly no features
@@ -91,8 +103,30 @@ Mixin, Session, Telegram & Clients
 ### [Celluloid](https://flathub.org/apps/io.github.celluloid_player.Celluloid)
 - MPV frontent with Wayland support
 - Uses portals for opening files
-- Keyboard shortcuts
-- some theme issues, opinionated GTK Design
+- Keyboard shortcuts, less GUI buttons (no customization)
+- customizable with standard MPV config files
+- follows light/dark mode when using Adwaita dyanamic theme (also on other desktops)
+
+example `input.conf`:
+
+```
+# Arrow keys control volume
+UP add volume 1
+DOWN add volume -1
+
+# Mouse click on center pause/play
+MOUSE_BTN0 cycle pause
+
+# speed change
+CTRL+UP add speed +0.1
+CTRL+DOWN add speed -0.1
+```
+
+### [Glide](https://flathub.org/apps/net.baseart.Glide)
+- minimalist filesystem permission, no portal support (opening videos through filemanager works)
+- native Wayland support
+- written in Rust
+- minimalist, using gstreamer
 
 ### [VLC](https://flathub.org/apps/org.videolan.VLC)
 - not yet official, but very well done
@@ -121,7 +155,7 @@ You may just use your video player. Otherwise:
 - very feature rich
 - native Wayland support through Qt
 
-## PDF Viewers
+## PDF Viewer
 ### Browser
 Your Browser can view and even edit PDFs!
 In Firefox when not using Arkenfox / Librewolf make sure
@@ -166,9 +200,9 @@ fwupdmgr upgrade
 ## Office
 ### Handwritten Notes
 [RNote](https://flathub.org/apps/com.github.flxzt.rnote)
-- pretty modern
-- some Filesystem permissions, but works completely without using Portals
-
+- native Wayland support
+- some Filesystem permissions, but works completely without; uses Portals
+- reported to work really well
 
 [Xournal++](https://flathub.org/apps/com.github.xournalpp.xournalpp)
 - permissions get better Flatpak adaption
@@ -183,41 +217,88 @@ is the only complete Office Suite for easily editing WYSIWYG (what you see is wh
 ### Alternative Solutions
 #### Text Editing
 **[Typst](https://typst.app)**
+- Modern LaTeX alternative, with easier syntax and fancy features like incremental updates
 - Install locally using cargo (Rust package manager)
 - Support for [VSCodium](https://flathub.org/apps/com.vscodium.codium) is currently best
-- Modern LaTeX alternative, with easier syntax and fancy features like incremental updates
 
 **Markdown**
 - Many available Editors, [search on Flathub](https://flathub.org/apps/search?q=markdown)
 
 **LaTeX**
-- often old applications
 - [Setzer](https://flathub.org/apps/org.cvfosammmm.Setzer) using GTK, [Kile](https://flathub.org/apps/org.kde.kile) using Qt
 - both have native Wayland support
 
 **Good general Text Editors**
 - [VSCodium](https://flathub.org/apps/com.vscodium.codium) uses a Microsoft codebase but has tracking removed. The Flatpak is unofficial and has limited features
 - Kate by KDE, currently only [Kwrite](https://flathub.org/apps/org.kde.kwrite) (a subset of Kate) is on Flathub
-- [Lapce](https://flathub.org/apps/dev.lapce.lapce): modern, but work in progress editor, [Website](https://lapce.dev/#)
+- [Lapce](https://flathub.org/apps/dev.lapce.lapce): modern, but work in progress editor written in Rust, [Website](https://lapce.dev/#)
 
 #### Presentations
-You may just use PDFs for presenting, which can open everywhere.
+You may just use PDFs for presenting, which can open everywhere. 
 
 Creating those can be done using Markdown, LaTeX and more. You may want to use [Pandoc](https://pandoc.org), which has no GUI and thus no Flatpak.
+
+Otherwise, Libreoffice Impress is the best tool.
 
 #### Calculations
 No tool is as complete and easy to use as Libreoffice Calc
 
-#### Draw
-- GIMP: legacy application which stuggles to use GTK 3, currently no Wayland or portal support
-- Krita: less image editing features than GIMP, focused towards drawing. No Wayland support currently.
-- Inkscape: modern application, no portal support because of specific requirements
+## Image Editing
+
+### Quick editing
+Gwenview from KDE, see above
+
+Pinta
+- modern drawing app with layer support
+- GTK, Wayland support
+- very specific filesystem permissions but works entirely without, using portals for opening and saving
+
+IMEditor
+- minimal, not many features, some not finished
+- no filesystem permissions, using portals
+- GTK, Wayland support
+- setting `GTK_THEME` `Adwaita:dark` as environment variable may help with theming issues
+
+Photoflare
+- various image editing features
+- unrestricted filesystrem permission, works without, using portals
+- Wayland support
+
+Drawing
+- simple elegant drawing tool
+- no filesystem acccess, using portals
+- GTK, Wayland support
+
+KDE only, native app:
+- Spectacle (yes the screenshot tool) has some more editing tools, [this Dolphin Addon helps to use them](https://store.kde.org/p/1854703)
+
+### Advanced Tools
+GIMP
+- legacy application which stuggles to use GTK 3
+- currently no Wayland or portal support
+
+Krita
+- less image editing features than GIMP
+- focused towards drawing
+- No Wayland support currently (port to Qt6 needed)
+
+Inkscape
+- modern application
+- no portal support because of specific requirements, [Issue report](https://gitlab.com/inkscape/inbox/-/issues/783)
+- Wayland support
 
 ## File Encryption
 ### Cryptomator
-Tool optimized for encrypting cloud synced files.
+- optimized for encrypting cloud synced files.
+- unlimited filesystem access, [developers actively block using sandboxed config files](https://github.com/cryptomator/cryptomator/issues/3297)
 
-You can restrict it's storage permission to the Cloud storage folder you use.
+You can restrict the filesystem access, after opening the app once, to create the directories:
+
+```
+/home/username/.local/share/Cryptomator
+/home/username/.config/Cryptomator
+# and all the directories where you store the encrypted folders
+```
 
 ## Password Management
 ### [GNOME Secrets](https://flathub.org/apps/org.gnome.World.Secrets)
@@ -232,7 +313,7 @@ You can restrict it's storage permission to the Cloud storage folder you use.
 - The lack of a "native messaging" portal prevents it form autofilling passwords in your browser
 
 ### Bitwarden: [Goldwarden](https://flathub.org/apps/com.quexten.Goldwarden)
-- no filesystem access
+- no filesystem access, using portals
 - Wayland support
 - written in Go
 
@@ -246,6 +327,7 @@ Note: Device Access may be wanted for password managers and OTP Generators, to a
 - [Solokeys](https://leetronics.de/en/shop/)
 - [Onlykey](https://onlykey.io/)
 
+Yubikey is not recommended, as they are proprietary and the firmware can not be updated, making them throwaway devices after the first discovered security vulnerability.
 
 ## Synchronisation & Backups
 ### [Syncthingy](https://flathub.org/apps/com.github.zocker_160.SyncThingy)
