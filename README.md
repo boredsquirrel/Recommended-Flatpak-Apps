@@ -40,10 +40,9 @@ So this list is a collection of Apps where maybe there is no alternative yet, an
 ---
 
 ## Web Browser
-[Seperate Sitre](https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
-These are not yet recommended as Flatpaks and in general the most complex topic.
+[Seperate Site](https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
 
-So they get an extra page.
+These are not yet recommended as Flatpaks and in general the most complex topic.
 
 ## Mail Program
 [Thunderbird](https://flathub.org/apps/org.mozilla.Thunderbird)
