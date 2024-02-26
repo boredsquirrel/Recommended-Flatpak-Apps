@@ -3,6 +3,23 @@ This list tries to filter out recommended Applications for everyday usage on Lin
 
 If a piece Software is actually secure has to be decided per-app though, as it is a very complex task.
 
+- [Web Browser](#browser)
+- [Mail Program](#mail-program)
+- [Messenger](#messenger)
+- [Image Viewer](#image-viewer)
+- [Video Player](#video-player)
+- [Music Player](#music-player)
+- [PDF Viewer](#pdfviewer)
+- [System](#system)
+- [Office](#office)
+- [Image Editing](#image-editing)
+- [File Encryption](#file-encryption)
+- [Password Management](#passwords)
+- [Synchronisation & Backups](#sync)
+- [File sharing](#file-sharing)
+- [Screen recording / Streaming](#record-stream)
+- [Tools](#tools)
+
 ### Why this is needed
 Flatpak's main purpose is to make every GUI app run on every Linux Distro.
 
@@ -22,12 +39,14 @@ So this list is a collection of Apps where maybe there is no alternative yet, an
 
 ---
 
-## [Web Browser](https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
+## Web Browser
+[Seperate Sitre](https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
 These are not yet recommended as Flatpaks and in general the most complex topic.
 
 So they get an extra page.
 
-## Mail Program: [Thunderbird](https://flathub.org/apps/org.mozilla.Thunderbird)
+## Mail Program
+[Thunderbird](https://flathub.org/apps/org.mozilla.Thunderbird)
 Thanks to a good campaign Thunderbird is back on track, modernizing their old code and making the App look modern.
 
 Thunderbird is based on Firefox ESR, just like the Torbrowser. This means we can assume it gets all Security Fixes of Firefox, and benefits by the Firefox project a lot.
