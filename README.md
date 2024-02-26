@@ -3,22 +3,22 @@ This list tries to filter out recommended Applications for everyday usage on Lin
 
 If a piece Software is actually secure has to be decided per-app though, as it is a very complex task.
 
-- [Web Browser](#web-browser)
-- [Mail Program](#mail-program)
-- [Messenger](#messenger)
-- [Image Viewer](#image-viewer)
-- [Video Player](#video-player)
-- [Music Player](#music-player)
-- [PDF Viewer](#pdf-viewer)
-- [System](#system)
-- [Office](#office)
-- [Image Editing](#image-editing)
-- [File Encryption](#file-encryption)
-- [Password Management](#password-management)
-- [Synchronisation & Backups](#synchronisation--backups)
-- [File sharing](#file-sharing)
-- [Screen recording / Streaming](#screen-recording--streaming)
-- [Tools](#tools)
+- 🌏 [Web Browser](#web-browser)
+- 📧 [Mail Program](#mail-program)
+- 💬 [Messenger](#messenger)
+- 🌄 [Image Viewer](#image-viewer)
+- 📼 [Video Player](#video-player)
+- 🎶 [Music Player](#music-player)↔
+- 📄 [PDF Viewer](#pdf-viewer)
+- ⚙️ [System](#system)
+- 🖥️ [Office](#office)
+- 🖌️ [Image Editing](#image-editing)
+- 🔒 [File Encryption](#file-encryption)
+- 🔑 [Password Management](#password-management)
+- ☁️ [Synchronisation & Backups](#synchronisation--backups)
+- ⏩ [File sharing](#file-sharing)
+- 🎥 [Screen recording / Streaming](#screen-recording--streaming)
+- 🧰 [Tools](#tools)
 
 ### Why this is needed
 Flatpak's main purpose is to make every GUI app run on every Linux Distro.
