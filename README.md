@@ -3,13 +3,13 @@ This list tries to filter out recommended Applications for everyday usage on Lin
 
 If a piece Software is actually secure has to be decided per-app though, as it is a very complex task.
 
-- [Web Browser](#browser)
+- [Web Browser](#web-browser)
 - [Mail Program](#mail-program)
 - [Messenger](#messenger)
 - [Image Viewer](#image-viewer)
 - [Video Player](#video-player)
 - [Music Player](#music-player)
-- [PDF Viewer](#pdfviewer)
+- [PDF Viewer](#pdf-viewer)
 - [System](#system)
 - [Office](#office)
 - [Image Editing](#image-editing)
