@@ -471,7 +471,7 @@ WINE has become very popular through the work of Valve, Codeweavers and many ope
 - using an outdated version of Android (Android 11, 14 is currently used)
 - 🖥️ Wayland only
 
-You may want to prefer using a virtual machine with (BlissOS](https://blissos.org/index.html) or even `qemu-aarch64` and a regular ARM image to have all Apps work. There is no easy install solution currently, but that would be a huge security benefit. Running in a rootless Podman container would also be a big improvement.
+You may want to prefer using a virtual machine with [BlissOS](https://blissos.org/index.html) or even `qemu-aarch64` and a regular ARM image to have all Apps work. There is no easy install solution currently, but that would be a huge security benefit. Running in a rootless Podman container would also be a big improvement.
 
 ## What to do now?
 Check your apps, see if you find more secure alternatives. If an app is not adapted to modern standards (and Desktops don't yet have GUI popups for filesystem access), you need Flatseal/KDE's systemsettings page to restrict the permissions of the apps to your needs.
