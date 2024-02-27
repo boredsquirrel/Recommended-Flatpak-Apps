@@ -305,7 +305,7 @@ GIMP
 Krita
 - less image editing features than GIMP
 - focused towards drawing
-- No Wayland support currently (port to Qt6 needed)
+- In the process to full Wayland support, porting to Qt6
 
 Inkscape
 - modern application
@@ -316,6 +316,7 @@ Inkscape
 ### Cryptomator
 - optimized for encrypting cloud synced files.
 - unlimited filesystem access, [developers actively block using sandboxed config files](https://github.com/cryptomator/cryptomator/issues/3297)
+- No Wayland support yet [Issue](https://github.com/cryptomator/cryptomator/issues/985)
 
 You can restrict the filesystem access, after opening the app once, to create the directories:
 
@@ -359,15 +360,17 @@ Yubikey is not recommended, as they are proprietary and the firmware can not be 
 - Very configurable
 - peer-to-peer Synchronisation without a Server!
 - unrestricted Filesystem Access, not using Portals: it has to be limited manually
+- Wayland: Systray icon and WebUI
 
 ### [Nextcloud Desktop](https://flathub.org/apps/com.nextcloud.desktopclient.nextcloud)
 - unrestricted filesystem access, not using Portals: it has to be limited manually
 - not an official Flatpak
-
+- Electron, Wayland support
 
 Notes:
 - many local backup Flatpaks need to be configured manually!
 - use Cryptomator for encryption if you don't trust your provider
+- often no client at all without using Electron, `nextcloudcmd` may be available
 
 ### [Cryptomator](https://flathub.org/apps/org.cryptomator.Cryptomator)
 - unrestricted filesystem access, not using Portals: it has to be limited manually
@@ -389,20 +392,27 @@ Notes:
 
 ### [Warp](https://flathub.org/apps/app.drey.Warp)
 - modern app for filesharing over the internet
-- Wayland support
+- GTK, Wayland support
 - using portals, download folder access can be removed
 - written in Rust
 
 ## Screen recording / Streaming
 ### [OBS Studio](https://flathub.org/apps/com.obsproject.Studio)
-- only good screen recording software on Wayland
+- complex and feature-rich recording solution, a bit bloated
 - screenshare portal support
 - filesystem access unrestricted, no portal support
+- filesize can often not be reduced well, ffmpeg support is not very accessible
 
-## [Blue Recorder](https://flathub.org/apps/sa.sy.bluerecorder)
-- working on Wayland support, currently only X11 support
-- default filesystem access unrestricted
-- screenshare & filesystem portal
+### [GPU Screen Recorder](https://flathub.org/apps/com.dec05eba.gpu_screen_recorder)
+- hardware accelerated minimalist screen recorder and streamer, best of all
+- GTK, Wayland support using portals
+- unrestricted filesystem access, no portals
+- special: needs to be installed as system flatpak, relies on polkit to get elevated hardware access
+
+### [Blue Recorder](https://flathub.org/apps/sa.sy.bluerecorder)
+- GTK, currently only X11 support
+- default filesystem access unrestricted, but can use portal
+- Wayland recording screenshare & filesystem portal
 - unofficial Flatpak
 
 ## Tools
@@ -410,6 +420,7 @@ Notes:
 Modern QR Code Scanner
 - using portals
 - written in Rust
+- GTK, Wayland support
 
 Problem: saves history with no off-switch. Fix: Delete the App storage after closing it by editing its Desktop entry:
 
