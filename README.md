@@ -19,6 +19,7 @@ If a piece Software is actually secure has to be decided per-app though, as it i
 - ⏩ [File sharing](#file-sharing)
 - 🎥 [Screen recording / Streaming](#screen-recording--streaming)
 - 🧰 [Tools](#tools)
+- 📦 [Windows and Android Apps](#running-windows-and-android-apps)
 
 ### Why this is needed
 Flatpak's main purpose is to make every GUI app run on every Linux Distro.
