@@ -8,7 +8,7 @@ If a piece Software is actually secure has to be decided per-app though, as it i
 - 💬 [Messenger](#messenger)
 - 🌄 [Image Viewer](#image-viewer)
 - 📼 [Video Player](#video-player)
-- 🎶 [Music Player](#music-player)↔
+- 🎶 [Music Player](#music-player)
 - 📄 [PDF Viewer](#pdf-viewer)
 - ⚙️ [System](#system)
 - 🖥️ [Office](#office)
