@@ -341,6 +341,12 @@ Inkscape
 - ⚠️ [developers actively block using sandboxed config files](https://github.com/cryptomator/cryptomator/issues/3297)
 - 🖥️ No Wayland support yet [Issue](https://github.com/cryptomator/cryptomator/issues/985)
 
+### [Picocrypt](https://flathub.org/apps/io.github.picocrypt.Picocrypt)
+  - an easy and intuituive drag-and-drop tool to encrypt files with XChaCha20 cipher
+  - encrypts entire file or folder for easy file transport
+  - compatiable with other operating systems like Windows and macOS
+  - small app size
+
 You can restrict the filesystem access, after opening the app once, to create the directories:
 
 ```
