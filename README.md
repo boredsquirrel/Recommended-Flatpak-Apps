@@ -32,7 +32,7 @@ Also you can't sort by the rating (yet) or exclude insecure apps.
 
 It can also be a bit overwhelming, as device access may simply be needed for a platform like a browser to be user friendly.
 
-<img src="https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/assets/113100745/b0717916-5c9f-4aa7-aa8a-9cb205a48b07"
+<img src="https://github.com/boredsquirrel/Recommended-Flatpak-Apps/assets/113100745/b0717916-5c9f-4aa7-aa8a-9cb205a48b07"
      width="400"
      height="400" />
      
@@ -41,52 +41,57 @@ So this list is a collection of Apps where maybe there is no alternative yet, an
 ---
 
 ## Web Browser
-[Seperate Site](https://github.com/trytomakeyouprivate/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
 
-⚠️ These are not yet recommended as Flatpaks and in general the most complex topic.
+> [!IMPORTANT]
+> These are not yet recommended as Flatpaks and in general the most complex topic.
+> Instead, refer to this [seperate page](https://github.com/boredsquirrel/Recommended-Flatpak-Apps/blob/main/Apps/Browsers.md)
 
 ## Mail Program
 [Thunderbird](https://flathub.org/apps/org.mozilla.Thunderbird)
 Thanks to a good campaign Thunderbird is back on track, modernizing their old code and making the App look modern.
 
-Thunderbird is based on Firefox ESR, just like the Torbrowser. This means we can assume it gets all Security Fixes of Firefox, and benefits by the Firefox project a lot.
+Thunderbird is based on Firefox ESR, just like the Torbrowser. This means we can assume it gets all security fixes of Firefox, while being more stable.
 
-It is the only feature-complete and widely used Mail program with easy support for [OpenPGP](https://www.openpgp.org/), and I highly recommend you to learn its basics! (A PGP tutorial will be added on time).
+As Thunderbird does not load a lot of dynamic code, sandboxing is not as important. See below on how to disable web browsing functionality!
 
-⚠️ Anyways, Thunderbird is not perfectly secure out of the box, so you may want to apply the [Thunderbird hardening settings](https://github.com/HorlogeSkynet/thunderbird-user.js).
+It is the only feature-complete and widely used Mail program with easy support for [OpenPGP](https://www.openpgp.org/), and I highly recommend you to use it. PGP is not great, actually is uses cryptography concepts from the 90s, but it is better than nothing. Some mail providers may support encrypting your inbox, to protect themselves from being forced to share your data.
+
+> [!NOTE]
+> Anyways, Thunderbird is not perfectly secure out of the box, so you may want to apply the [Thunderbird hardening settings](https://github.com/HorlogeSkynet/thunderbird-user.js).
+> The Fork "Betterbird" is no longer needed for features like the "card view" that got integrated into Thunderbird. It may be behind on updates.
+> Instead, you can use [Dove](https://codeberg.org/celenity/Dove) and [The Thunderbird user.js](https://github.com/HorlogeSkynet/thunderbird-user.js/wiki).
+
 
 This will have some drawbacks, and a middleway is needed, that allows
 - Local timezone
 - Extension installs
 - Calendar Event Adding
 
-This may be possible to apply using an [override](https://github.com/arkenfox/user.js/wiki/3.1-Overrides), or by splitting up the hardening user.js into seperate groups, depending on your use case.
-
-The Hardening configuration is a deviation of the [Arkenfox userjs](https://github.com/arkenfox/user.js), which is a security & privacy Configuration set for Firefox. As a Mail program is often used differently (you only contact people you know and mostly in the same timezone) your requirements may be different.
+The Hardening configuration is a deviation of the [Arkenfox userjs](https://github.com/arkenfox/user.js), which is a security & privacy configuration set for Firefox. As a mail program is mostly used differently than a web browser (you only contact people you know and mostly in the same timezone) your requirements may be different.
 
 ### Addons
 You should not install dozens of Addons, but some are really useful.
-- [Thunderbird Conversations](https://addons.thunderbird.net/en-US/thunderbird/addon/gmail-conversation-view): Useful threads for mail exchange with the same person or group. Sometime in the future this will become native to Thunderbird, and this addon obsolete.
 - [DKIM Verifier](https://addons.thunderbird.net/en-US/thunderbird/addon/dkim-verifier/): Very important, it shows a Warning if the mail origin may be manipulated.
+
+Nice to have:
+- [Thunderbird Conversations](https://addons.thunderbird.net/en-US/thunderbird/addon/gmail-conversation-view): Useful threads for mail exchange with the same person or group.
 - [QuickText](https://addons.thunderbird.net/en-US/thunderbird/addon/quicktext): Fill in snippets like greetings or closings
 - [Nextcloud Attachments](https://addons.thunderbird.net/en-US/thunderbird/addon/filelink-nextcloud-owncloud): This addon allows to send attachments via your FOSS cloud storage, to work with attachment size limitations and save data. May also support password-protected file sharing (only secure when using PGP!)
 
-Theoretically you can install most Firefox addon files manually. ("Dark Background & Light Text", "Firefox Translations" & Snowflake do not work)
-
-⚠️ Also: The Fork "Betterbird" is no longer needed for features like the "card view" that got integrated into Thunderbird. It also may be behind on updates.
-
 ## Messenger
-Most popular messengers are way more secure than Mail, phone calls or SMS. Many clients are using Electron which is a security issue, because it bundles a less secure Chromium, is overcomplex and doesnt respect system configs.
+Most popular messengers are way more secure than Mail, phone calls or SMS. Many clients are using Electron which is a security issue, because it bundles a less secure Chromium, is overcomplex and often outdated.
+
+If messengers have a web client, use that instead of the Electron app. Especially with Chromium based browsers, you can create a progressive webapp which behaves like a local app.
 
 ### Matrix
 Fractal
-- 🖥️ GTK client, native Wayland support
+- 🖥️ GTK, native Wayland support
 - 💾 no filesystem access, uses portals
 - written in Rust
 - adaptive UI
 - not all features supported, sometimes opinionated design
 
-Element, Syphon, Fluffychat: all Electron apps, Element may be preferred. Use Element Web if you want to avoid using Electron apps.
+Element, Syphon, Fluffychat: all Electron apps, Element may be preferred.
 
 ### XMPP
 Dino, Gajim
@@ -94,17 +99,18 @@ Dino, Gajim
 - 💾 file portal support
 
 ### Signal, Threema
-Official clients use Electron, Flare for Signal is not yet complete.
+Flare
+- 🖥️ GTK, native Wayland support
+- not yet complete.
 
 ### ⚠️ Warnings
 Mixin: outdated runtime, not well maintained
 
-Teams, Skype, Discord,... : all not E2EE so your messages will be read, scanned, etc.
+Telegram, Teams, Skype, Discord,... : all not [E2EE](https://en.wikipedia.org/wiki/End-to-end_encryption) so your messages will be read, scanned, used to train AI etc. This can lead to identity theft, impersonation attacks or hackers getting your data. If the provider doesn't have your messages in plain text, they can't be hacked.
 
-Telegram:
-- 🖥️ not using Electron, Wayland support, well packaged
-- Desktop does not support end-to-end encryption
-- Telegram doesn't support E2EE group chats at all
+Telegram encrypted Chats: Outdated cryptography, a lot of metadata, opt-in encryption
+
+Session: Fork of Signal protocol that was made a lot worse, [source](https://soatok.blog/2025/01/14/dont-use-session-signal-fork/)
 
 ## Image Viewer
 ### [Loupe](https://flathub.org/apps/org.gnome.Loupe)
@@ -130,7 +136,7 @@ Telegram:
 - customizable with standard MPV config files
 - follows light/dark mode when using Adwaita dyanamic theme (also on other desktops)
 
-example `input.conf`:
+example `input.conf` you can place in `~/.var/app/io.github.celluloid_player.Celluloid/config/celluloid/` and enable in the settings:
 
 ```
 # Arrow keys control volume
@@ -144,8 +150,6 @@ MOUSE_BTN0 cycle pause
 CTRL+UP add speed +0.1
 CTRL+DOWN add speed -0.1
 ```
-
-Place this file in `~/.var/app/io.github.celluloid_player.Celluloid/config/celluloid/` to allow automatic loading etc.
 
 ### [Glide](https://flathub.org/apps/net.baseart.Glide)
 - 💾 minimalist filesystem permission, no portal support (opening videos through filemanager works)
@@ -349,6 +353,12 @@ You can restrict the filesystem access, after opening the app once, to create th
 # and all the directories where you store the encrypted folders
 ```
 
+### [Picocrypt](https://flathub.org/apps/io.github.picocrypt.Picocrypt)
+- an easy and intuituive drag-and-drop tool to encrypt files with XChaCha20 cipher
+- encrypts entire file or folder for easy file transport
+- compatiable with other operating systems like Windows and macOS
+- small app size
+  
 ## Password Management
 ### [GNOME Secrets](https://flathub.org/apps/org.gnome.World.Secrets)
 - possible replacement for KeepassXC
